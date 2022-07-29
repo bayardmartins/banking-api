@@ -1,0 +1,645 @@
+{
+	"info": {
+		"_postman_id": "2c264a24-8f17-4ad8-af9f-273e83362acf",
+		"name": "Banking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "GetCustomers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3VzZXJkYXRhIjoibG9naW4iLCJuYmYiOjE2NDI5NzQ4MDcsImV4cCI6MTY0Mjk4MjAwNywiaWF0IjoxNjQyOTc0ODA3fQ.WkNqqC9d7qidQS0XK3KESnp94-kXqooP0ZPB4998gGg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7265/v1/api/Customer/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7265",
+							"path": [
+								"v1",
+								"api",
+								"Customer",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostCustomer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3VzZXJkYXRhIjoibG9naW4iLCJuYmYiOjE2NDI5NzQ4MDcsImV4cCI6MTY0Mjk4MjAwNywiaWF0IjoxNjQyOTc0ODA3fQ.WkNqqC9d7qidQS0XK3KESnp94-kXqooP0ZPB4998gGg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Customer Novo\",\n    \"Password\": \"pass\",\n    \"NuDocument\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7265/v1/api/Customer/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7265",
+							"path": [
+								"v1",
+								"api",
+								"Customer",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutCustomer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3VzZXJkYXRhIjoibG9naW4iLCJuYmYiOjE2NDI2NzQxNTksImV4cCI6MTY0MjY4MTM1OSwiaWF0IjoxNjQyNjc0MTU5fQ.-kqitsN7r-Jmtw_WFsyauoCI2l--p5lhpEiJAXsZYXc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\": 2,\n    \"Name\": \"Name Test New\",\n    \"Password\": \"pass\",\n    \"NuDocument\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7265/v1/api/Customer/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7265",
+							"path": [
+								"v1",
+								"api",
+								"Customer",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InactivateCustomer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3VzZXJkYXRhIjoibG9naW4iLCJuYmYiOjE2NDI3MjU0MDQsImV4cCI6MTY0MjczMjYwNCwiaWF0IjoxNjQyNzI1NDA0fQ.ZMwthN7S7M8altK58XqzAq1Fz6WddMN1Otv88jZoMU0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7265/v1/api/Customer/Inactivate/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7265",
+							"path": [
+								"v1",
+								"api",
+								"Customer",
+								"Inactivate",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCustomersById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3VzZXJkYXRhIjoibG9naW4iLCJuYmYiOjE2NDI4NDY5NTYsImV4cCI6MTY0Mjg1NDE1NiwiaWF0IjoxNjQyODQ2OTU2fQ.6MTrNR_EmaObNpeRF5ziZhyMl8UTUtJcRDa5gvJ9S2I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7265/v1/api/Customer/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7265",
+							"path": [
+								"v1",
+								"api",
+								"Customer",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DelCustomersById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3VzZXJkYXRhIjoibG9naW4iLCJuYmYiOjE2NDI5MzUzNDksImV4cCI6MTY0Mjk0MjU0OSwiaWF0IjoxNjQyOTM1MzQ5fQ.XMSFBK2iS59tSQ1W2KCdpaI6u89tnTfhPoU-UkMwLJk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7265/v1/api/Customer/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7265",
+							"path": [
+								"v1",
+								"api",
+								"Customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BankAccount",
+			"item": [
+				{
+					"name": "GetBankAccount",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3VzZXJkYXRhIjoibG9naW4iLCJuYmYiOjE2NDI5MzUzNDksImV4cCI6MTY0Mjk0MjU0OSwiaWF0IjoxNjQyOTM1MzQ5fQ.XMSFBK2iS59tSQ1W2KCdpaI6u89tnTfhPoU-UkMwLJk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7265/v1/api/BankAccount/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7265",
+							"path": [
+								"v1",
+								"api",
+								"BankAccount",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBalance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3VzZXJkYXRhIjoibG9naW4iLCJuYmYiOjE2NDI5MzUzNDksImV4cCI6MTY0Mjk0MjU0OSwiaWF0IjoxNjQyOTM1MzQ5fQ.XMSFBK2iS59tSQ1W2KCdpaI6u89tnTfhPoU-UkMwLJk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7265/v1/api/BankAccount/2/Balance",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7265",
+							"path": [
+								"v1",
+								"api",
+								"BankAccount",
+								"2",
+								"Balance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetStatement",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3VzZXJkYXRhIjoibG9naW4iLCJuYmYiOjE2NDI5MzUzNDksImV4cCI6MTY0Mjk0MjU0OSwiaWF0IjoxNjQyOTM1MzQ5fQ.XMSFBK2iS59tSQ1W2KCdpaI6u89tnTfhPoU-UkMwLJk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7265/v1/api/BankAccount/2/Statement/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7265",
+							"path": [
+								"v1",
+								"api",
+								"BankAccount",
+								"2",
+								"Statement",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBankAccountListByCustomerId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3VzZXJkYXRhIjoibG9naW4iLCJuYmYiOjE2NDI5MzUzNDksImV4cCI6MTY0Mjk0MjU0OSwiaWF0IjoxNjQyOTM1MzQ5fQ.XMSFBK2iS59tSQ1W2KCdpaI6u89tnTfhPoU-UkMwLJk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7265/v1/api/BankAccount/Customer/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7265",
+							"path": [
+								"v1",
+								"api",
+								"BankAccount",
+								"Customer",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostBankAccount",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3VzZXJkYXRhIjoibG9naW4iLCJuYmYiOjE2NDI5NzQ4MDcsImV4cCI6MTY0Mjk4MjAwNywiaWF0IjoxNjQyOTc0ODA3fQ.WkNqqC9d7qidQS0XK3KESnp94-kXqooP0ZPB4998gGg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"AccountNumber\": \"5678\",\n    \"Password\": \"pass\",\n    \"Balance\": 1000.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7265/v1/api/BankAccount/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7265",
+							"path": [
+								"v1",
+								"api",
+								"BankAccount",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutBankAccount",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3VzZXJkYXRhIjoibG9naW4iLCJuYmYiOjE2NDI2NzQxNTksImV4cCI6MTY0MjY4MTM1OSwiaWF0IjoxNjQyNjc0MTU5fQ.-kqitsN7r-Jmtw_WFsyauoCI2l--p5lhpEiJAXsZYXc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\": 2,\n    \"Name\": \"Name Test New\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7265/v1/api/BankAccount/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7265",
+							"path": [
+								"v1",
+								"api",
+								"BankAccount",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBankAccountById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3VzZXJkYXRhIjoibG9naW4iLCJuYmYiOjE2NDI5MzUzNDksImV4cCI6MTY0Mjk0MjU0OSwiaWF0IjoxNjQyOTM1MzQ5fQ.XMSFBK2iS59tSQ1W2KCdpaI6u89tnTfhPoU-UkMwLJk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7265/v1/api/BankAccount/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7265",
+							"path": [
+								"v1",
+								"api",
+								"BankAccount",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DelBankAccountById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3VzZXJkYXRhIjoibG9naW4iLCJuYmYiOjE2NDI5MzUzNDksImV4cCI6MTY0Mjk0MjU0OSwiaWF0IjoxNjQyOTM1MzQ5fQ.XMSFBK2iS59tSQ1W2KCdpaI6u89tnTfhPoU-UkMwLJk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7265/v1/api/BankAccount/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7265",
+							"path": [
+								"v1",
+								"api",
+								"BankAccount",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "Deposit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3VzZXJkYXRhIjoibG9naW4iLCJuYmYiOjE2NDI5MzUzNDksImV4cCI6MTY0Mjk0MjU0OSwiaWF0IjoxNjQyOTM1MzQ5fQ.XMSFBK2iS59tSQ1W2KCdpaI6u89tnTfhPoU-UkMwLJk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"destinyAccountId\" : 1,\n    \"value\" : 200.90\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7265/v1/api/Transaction/Deposit",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7265",
+							"path": [
+								"v1",
+								"api",
+								"Transaction",
+								"Deposit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Withdraw",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3VzZXJkYXRhIjoibG9naW4iLCJuYmYiOjE2NDI5MzUzNDksImV4cCI6MTY0Mjk0MjU0OSwiaWF0IjoxNjQyOTM1MzQ5fQ.XMSFBK2iS59tSQ1W2KCdpaI6u89tnTfhPoU-UkMwLJk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"destinyAccountId\" : 3,\n    \"value\" : 1000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7265/v1/api/Transaction/Withdraw",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7265",
+							"path": [
+								"v1",
+								"api",
+								"Transaction",
+								"Withdraw"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transfer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3VzZXJkYXRhIjoibG9naW4iLCJuYmYiOjE2NDI5MzUzNDksImV4cCI6MTY0Mjk0MjU0OSwiaWF0IjoxNjQyOTM1MzQ5fQ.XMSFBK2iS59tSQ1W2KCdpaI6u89tnTfhPoU-UkMwLJk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"destinyAccountId\" : 1,\n    \"originAccountId\" : 2,\n    \"value\" : 75.50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7265/v1/api/Transaction/Transfer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7265",
+							"path": [
+								"v1",
+								"api",
+								"Transaction",
+								"Transfer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
